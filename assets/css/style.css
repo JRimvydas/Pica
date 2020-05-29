@@ -28,3 +28,43 @@
     background-image: url("https://imageproxy.ifunny.co/noop/user_photos/dbaf18a31d42c311e6007aec645fa7c22fb53b3d_0.jpg%3F1484760104");
 }
 
+section {
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: peru;
+}
+
+section > * {
+ margin-bottom: 20px;
+}
+
+.answer1 {
+    background-image: url("https://memeguy.com/photos/images/nine-months-after-sleeping-with-the-pizza-delivery-man-334711.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25%;
+    height: 35vh;
+    margin-left: 80px;
+}
+
+.answer2 {
+    background: url("https://i.chzbgr.com/full/7820913920/h8958AFC2/sometimes-you-just-cant-wait");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25%;
+    height: 35vh;
+    margin-left: 80px;
+}
+
+.answer3 {
+    background: url("https://www.memesmonkey.com/images/memesmonkey/28/288598066ada82d8fac368715eada9a5.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25%;
+    height: 35vh;
+    margin-left: 80px;
+}
+
