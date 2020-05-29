@@ -110,36 +110,42 @@ function button_attr($button_id, array $button): string
     return html_attr($attr);
 }
 
-var_dump($_POST);
 
 ?>
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    </head>
-    <body>
-        <main>
-            <h1 class>PASIGAMINK PZDPICA PATS!</h1>
-            <form <?php print html_attr($form['attr'] ?? []) ?>>
-                <?php foreach ($form['fields'] ?? [] as $field_id => $field) : ?>
-                    <label><?php print $field_id ?>
-                        <select <?php print select_attr($field_id, $field) ?>>
-                            <?php foreach ($field['options'] ?? [] as $option_id => $option) : ?>
-                                <option <?php print option_attr($option_id); ?>><?php print $option ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </label>
-                <?php endforeach; ?>
-                <?php foreach ($form['buttons'] ?? [] as $button_id => $button) : ?>
-                <button <?php print button_attr($button_id, $button); ?>><?php print $button['title']; ?></button>
-                <?php endforeach; ?>
-            </form>
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <?php require 'navbar.php'; ?>
+    <main>
+        <div class="make-pizza">
+            <div class="pizza-form">
+                <h1 class>PASIGAMINK PZDPICA PATS!</h1>
+                <form <?php print html_attr($form['attr'] ?? []) ?>>
+                    <?php foreach ($form['fields'] ?? [] as $field_id => $field) : ?>
+                        <label id="label"><?php print $field_id ?>
+                            <select id="select" <?php print select_attr($field_id, $field) ?>>
+                                <?php foreach ($field['options'] ?? [] as $option_id => $option) : ?>
+                                    <option <?php print option_attr($option_id); ?>><?php print $option ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </label>
+                    <?php endforeach; ?>
+                    <?php foreach ($form['buttons'] ?? [] as $button_id => $button) : ?>
+                        <button  <?php print button_attr($button_id, $button); ?>><?php print $button['title']; ?></button>
+                    <?php endforeach; ?>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
 </html>

@@ -3,9 +3,10 @@
   margin: 0;
   padding: 0;
 }
-body{
-    background-color: rgb(173, 142, 95);
+body {
+  background-color: rgb(173, 142, 95);
 }
+
 
 .container {
   width: 80%;
@@ -19,7 +20,7 @@ body{
 .container > h1 {
   color: rgb(247, 173, 36);
   font-weight: 100;
-  font-style: ;
+  font-style:italic ;
 }
 
 .nav a {
@@ -32,27 +33,27 @@ body{
 .grid {
   display: inline-block;
   background-size: cover;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
 }
 
 .grid-3 {
-  height: 350px;
+  height: 245px;
   width: 33%;
 }
 
 .grid-4 {
-  height: 300px;
+  height: 180px;
   width: 24.7%;
 }
 
 .grid-5 {
-  height: 250px;
+  height: 143px;
   width: 19.77%;
 }
 
 .grid-6 {
   width: 16.43%;
-  height: 200px;
+  height: 123px;
 }
 
 .pica-1 {
@@ -93,4 +94,52 @@ body{
   color: rgb(247, 173, 36);
   font-size: 6rem;
   font-weight: 700;
+}
+
+#label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgb(207, 166, 76);
+}
+
+.make-pizza {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.pizza-form {
+  width: 40%;
+  background-color: rgb(138, 108, 54);
+  height: 340px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.pizza-form > h1 {
+  color: rgb(247, 173, 36);
+  font-weight: 200;
+  padding: 15px;
+}
+
+#select {
+  display: block;
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.make-button {
+  margin-top: 15px;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background-color: rgb(223, 148, 19);
+  color: white;
 }

@@ -1,23 +1,5 @@
 <?php
 
-$nav = [
-    'nav' => [
-        'Index' => [
-            'link' => 'index.php',
-        ],
-        'About' => [
-            'link' => 'about.php',
-        ],
-        'Form' => [
-            'link' => 'form.php',
-        ]
-    ]
-
-];
-
-$class = array_keys($nav)[0];
-
-
 /**
  * generate_matrix function generates a grid
  *
@@ -52,15 +34,17 @@ $matrix = generate_matrix($number);
 <body>
     <?php require 'navbar.php'; ?>
     <main>
-        <?php foreach ($matrix as $key => $row) : ?>
-            <div>
-                <?php foreach ($row as $square) : ?>
-                    <div class="grid grid-<?php print $number; ?> <?php print $square; ?> pica-<?php print rand(1, 6); ?> "></div>
-                <?php endforeach; ?>
+        <div class="home">
+            <?php foreach ($matrix as $key => $row) : ?>
+                <div>
+                    <?php foreach ($row as $square) : ?>
+                        <div class="grid grid-<?php print $number; ?> <?php print $square; ?> pica-<?php print rand(1, 6); ?> "></div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endforeach; ?>
+            <div class="title">
+                <h1>PZ2A PICERIJA</h1>
             </div>
-        <?php endforeach; ?>
-        <div class="title">
-            <h1>PZ2A PICERIJA</h1>
         </div>
     </main>
 </body>
