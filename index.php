@@ -1,40 +1,52 @@
 <?php
 
-$nav = [
-    'nav' => [
-        'index' => [
-            'link' => 'index.php',
-        ],
-        'about' => [
-            'link' => 'about.php',
-        ],
-        'form' => [
-            'link' => 'form.php',
-        ]
-    ]
+/**
+ * generate_matrix function generates a grid
+ *
+ * @param  int $size
+ * @return array
+ */
+function generate_matrix(int $size): array
+{
+    $matrix = [];
+    for ($i = 0; $i < $size; $i++) {
+        for ($j = 0; $j < $size; $j++) {
+            $matrix[$i][$j] = rand(0, 1);
+        }
+    }
 
-];
+    return $matrix;
+}
 
-$grid = [
-    'class' => [
-        'pica-' => rand(1, 6),
-    ],
-];
+$number = rand(3, 6);
+$matrix = generate_matrix($number);
 
 ?>
-<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    </head>
-    <body>
-        <main>
 
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <?php require 'navbar.php'; ?>
+    <main>
+        <div class="home">
+            <?php foreach ($matrix as $key => $row) : ?>
+                <div>
+                    <?php foreach ($row as $square) : ?>
+                        <div class="grid grid-<?php print $number; ?> <?php print $square; ?> pica-<?php print rand(1, 6); ?> "></div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endforeach; ?>
+            <div class="title">
+                <h1>PZ2A PICERIJA</h1>
+            </div>
+        </div>
+    </main>
+</body>
+
 </html>

@@ -1,31 +1,139 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(173, 142, 95);
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.container > h1 {
+  color: rgb(247, 173, 36);
+  font-weight: 100;
+  font-style:italic ;
+}
+
+.nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.123rem;
+}
+
+.grid {
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grid-3 {
+  height: 245px;
+  width: 33%;
+}
+
+.grid-4 {
+  height: 180px;
+  width: 24.7%;
+}
+
+.grid-5 {
+  height: 143px;
+  width: 19.77%;
+}
+
+.grid-6 {
+  width: 16.43%;
+  height: 123px;
 }
 
 .pica-1 {
-    background-image: url("https://cdn.fishki.net/upload/post/2018/01/17/2485804/tn/19-1.jpg");
+  background-image: url("https://cdn.fishki.net/upload/post/2018/01/17/2485804/tn/19-1.jpg");
 }
 
 .pica-2 {
-    background-image: url("https://cdn.fishki.net/upload/post/201406/06/1275305/catsmob_daily_picdump_04040_047.jpg");
+  background-image: url("https://cdn.fishki.net/upload/post/201406/06/1275305/catsmob_daily_picdump_04040_047.jpg");
 }
 
 .pica-3 {
-    background-image: url("https://www.austinchronicle.com/imager/b/original/1651196/bba8/sid.jpg");
+  background-image: url("https://www.austinchronicle.com/imager/b/original/1651196/bba8/sid.jpg");
 }
 
 .pica-4 {
-    background-image: url("https://s.zefirka.net/images/2018-06-28/krasivye-devushki-lyubyat-piccu/krasivye-devushki-lyubyat-piccu-19.jpg");
+  background-image: url("https://s.zefirka.net/images/2018-06-28/krasivye-devushki-lyubyat-piccu/krasivye-devushki-lyubyat-piccu-19.jpg");
 }
 
 .pica-5 {
-    background-image: url("https://s.erofishki.cc/upload/post/2019/03/04/2898245/tn/1376.jpg");
+  background-image: url("https://s.erofishki.cc/upload/post/2019/03/04/2898245/tn/1376.jpg");
 }
 
 .pica-6 {
-    background-image: url("https://imageproxy.ifunny.co/noop/user_photos/dbaf18a31d42c311e6007aec645fa7c22fb53b3d_0.jpg%3F1484760104");
+  background-image: url("https://imageproxy.ifunny.co/noop/user_photos/dbaf18a31d42c311e6007aec645fa7c22fb53b3d_0.jpg%3F1484760104");
+}
+
+.title {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  width: 60%;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.title > h1 {
+  color: rgb(247, 173, 36);
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+#label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgb(207, 166, 76);
+}
+
+.make-pizza {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.pizza-form {
+  width: 40%;
+  background-color: rgb(138, 108, 54);
+  height: 340px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.pizza-form > h1 {
+  color: rgb(247, 173, 36);
+  font-weight: 200;
+  padding: 15px;
+}
+
+#select {
+  display: block;
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 section {
@@ -68,3 +176,10 @@ section > * {
     margin-left: 80px;
 }
 
+.make-button {
+  margin-top: 15px;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background-color: rgb(223, 148, 19);
+  color: white;
+}
